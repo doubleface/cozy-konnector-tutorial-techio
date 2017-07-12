@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-project-template",
+  "name": "cozy-konnector-hellp",
   "version": "1.0.0",
   "description": "",
-  "author": "FERNANDEZ Quentin",
-  "license": "ISC",
+  "author": "Christophe Thiriot",
+  "license": "MIT",
   "dependencies": {
-    "mocha": "^3.4.2"
+    "cozy-konnector-libs": "latest"
   }
 }
