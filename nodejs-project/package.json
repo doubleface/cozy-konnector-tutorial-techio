@@ -5,6 +5,7 @@
   "author": "Christophe Thiriot",
   "license": "MIT",
   "dependencies": {
-    "cozy-konnector-libs": "latest"
+    "cozy-konnector-libs": "latest",
+    "request-debug": "latest"
   }
 }
