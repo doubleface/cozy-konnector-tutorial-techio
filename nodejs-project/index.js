@@ -10,7 +10,7 @@ module.exports = new BaseKonnector(fields => {
   return rq({
     uri: 'https://api.qwant.com/api/search/images',
     qs: {
-      q: 'chatons',
+      q: 'chatons', // change the search keyword if you want
       count: 10
     }
   })
@@ -19,13 +19,13 @@ module.exports = new BaseKonnector(fields => {
     if (body && body.data && body.data.result && body.data.result.items) {
       // entries.fetched is used by filterExisting to check if some of its items already exist
       result = body.data.result.items.map((item, index) => ({
-          fileurl: item.media,
-          filename: `image${index}.jpg`
+        fileurl: item.media,
+        filename: `image${index}.jpg`
       }))
     }
     return result
   })
   .then(entries => saveFiles(entries, fields.folderPath))
-  .then(result => log('debug', result, 'List of fetched kittens'))
-  .then(() => console.log('TECHIO> open -s /project/target index.html"'))
+  // .then(result => console.log(result, 'result'))
+  .then(() => console.log('TECHIO> open -s /project/target index.html'))
 })
