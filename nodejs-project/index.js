@@ -18,10 +18,14 @@ module.exports = new BaseKonnector(fields => {
     let result = []
     if (body && body.data && body.data.result && body.data.result.items) {
       // entries.fetched is used by filterExisting to check if some of its items already exist
-      result = body.data.result.items.map(item => ({fileurl: item.media}))
+      result = body.data.result.items.map((item, index) => ({
+          fileurl: item.media,
+          filename: `image${index}.jpg`
+      }))
     }
     return result
   })
   .then(entries => saveFiles(entries, fields.folderPath))
   .then(result => log('debug', result, 'List of fetched kittens'))
+  .then(() => console.log('TECHIO> open -s /project/target index.html"'))
 })
