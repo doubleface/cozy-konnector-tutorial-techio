@@ -4,4 +4,4 @@ This exercise will first show you a the minimal konnector
 
 # Hands-on
 
-@[Hello konnector!]({ "stubs": ["hello.js"], "command": "node_modules/.bin/cozy-konnector-standalone" })
+@[Hello konnector!]({ "stubs": ["index.js"], "command": "node_modules/.bin/cozy-konnector-standalone" })
