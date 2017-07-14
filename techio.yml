@@ -1,11 +1,13 @@
-title : Node.JS
+title : Cozy Connector Tutorial
 
 # Table of contents
 plan:
-  - title: Welcome # Set the page title
-    statement: markdowns/welcome.md # Set the file path to the page content
-#  - title: Another Page
-#    statement: markdowns/another-page.md
+  - title: intro # Set the page title
+    statement: markdowns/intro.md # Set the file path to the page content
+  - title: Hello connector!
+    statement: markdowns/hello.md
+  - title: Save cats
+    statement: markdowns/cats.md
 
 # Settings for your programming projects and the associated Docker images
 projects:
