@@ -1,16 +1,18 @@
-<style>
-  img {
-    max-width: 50vw;
-    max-height: 50vh;
-  }
-</style>
-<img src="image0.jpg">
-<img src="image1.jpg">
-<img src="image2.jpg">
-<img src="image3.jpg">
-<img src="image4.jpg">
-<img src="image5.jpg">
-<img src="image6.jpg">
-<img src="image7.jpg">
-<img src="image8.jpg">
-<img src="image9.jpg">
+<html>
+  <meta charset="UTF-8">
+  <head>
+    <style>
+      img {
+        max-width: 50vw;
+        max-height: 50vh;
+      }
+    </style>
+    <script type="text/javascript" src="result.js"></script>
+  </head>
+  <body>
+    <main></main>
+    <script>
+document.querySelector('main').innerHTML = window.result.map(item => `<img src="${item.fileobject._id}">`).join('\n')
+    </script>
+  </body>
+</html>

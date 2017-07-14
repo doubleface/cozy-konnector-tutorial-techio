@@ -18,14 +18,16 @@ module.exports = new BaseKonnector(fields => {
     let result = []
     if (body && body.data && body.data.result && body.data.result.items) {
       // entries.fetched is used by filterExisting to check if some of its items already exist
-      result = body.data.result.items.map((item, index) => ({
-        fileurl: item.media,
-        filename: `image${index}.jpg`
-      }))
+      result = body.data.result.items.map((item, index) => ({ fileurl: item.media }))
     }
     return result
   })
   .then(entries => saveFiles(entries, fields.folderPath))
-  // .then(result => console.log(result, 'result'))
-  .then(() => console.log('TECHIO> open -s /project/target index.html'))
+  // saves the informations about resulting images to display it after
+  .then(result => {
+    require('fs').writeFileSync('result.js', `window.result = ${JSON.stringify(result)}`)
+    return result
+  })
+  // displays the list of results
+  .then(result => console.log('TECHIO> open -s /project/target index.html'))
 })
