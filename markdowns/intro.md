@@ -6,7 +6,3 @@ cozy connector.
 You will find many examples of connectors that you can modify and run directly.
 
 Let's go!
-
-# Hands-on
-
-@[Hello konnector!]({ "stubs": ["index.js"], "command": "node_modules/.bin/cozy-konnector-standalone" })
