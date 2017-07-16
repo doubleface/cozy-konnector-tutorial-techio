@@ -6,5 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "cozy-konnector-libs": "3.0.0-alpha.13"
+  },
+  "scripts": {
+    "standalone": "cozy-konnector-standalone"
   }
 }
