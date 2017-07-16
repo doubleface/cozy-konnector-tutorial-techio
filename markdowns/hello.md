@@ -38,5 +38,5 @@ BaseKonnector:
   all the parameters for the connector (no one is needed this time) after doing all the previous steps
   and waits for a promise as a return value
 
-You can change the value in konnector-dev-config.json and see what is passed as first argument in
+You can change the "fields" value in konnector-dev-config.json and see what is passed as first argument in
 the init function.
