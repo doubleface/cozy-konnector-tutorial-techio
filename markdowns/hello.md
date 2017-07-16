@@ -40,3 +40,13 @@ BaseKonnector:
 
 You can change the "fields" value in konnector-dev-config.json and see what is passed as first argument in
 the init function.
+
+## The log function
+
+You can also see the log function in this example which is able to output json when run in
+production, to let the cozy stack interpret its output and can output colored text in developpement
+and standalone modes. The first parameter is the `type` of the log message. It can be `info`,
+`error`
+, `warning` or `debug` and there is a color associated to each type. The second parameter is item
+we want to log and it can be of any type which can be JSON.stringifyed. And there is a third
+parameter which is optionnal and can be a label to the log, which must be a string.
