@@ -2,7 +2,7 @@
 
 Here is the traditional hello world code, but for a connector!
 
-@[Hello konnector!]({ "stubs": ["hello.js"], "command": "node_modules/.bin/cozy-konnector-standalone hello.js" })
+@[Hello konnector!]({ "stubs": ["hello.js", "konnector-dev-config.json"], "command": "node_modules/.bin/cozy-konnector-standalone hello.js" })
 
 If you run it, you will the the hello world message in the standard output as a json string. The
 cozy stack can interpret those message and this will be usefull later.
@@ -26,3 +26,17 @@ node_modules/.bin/cozy-konnector-standalone
 
 Your hello world konnector should work!
 
+## The BaseKonnector
+
+This connector does not do much, but it is the occasion to learn about the features of the
+BaseKonnector:
+
+- Every connector must inherit from the BaseKonnector
+- It fetches the information about the linked account in the cozy (or in
+  ./konnector-dev-config.json in standalone mode
+- It calls the function passed as argument in its constructor with an object argument containing
+  all the parameters for the connector (no one is needed this time) after doing all the previous steps
+  and waits for a promise as a return value
+
+You can change the value in konnector-dev-config.json and see what is passed as first argument in
+the init function.
