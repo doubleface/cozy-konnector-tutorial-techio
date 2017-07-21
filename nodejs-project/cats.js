@@ -17,7 +17,6 @@ module.exports = new BaseKonnector(fields => {
   .then(body => {
     let result = []
     if (body && body.data && body.data.result && body.data.result.items) {
-      // entries.fetched is used by filterExisting to check if some of its items already exist
       result = body.data.result.items.map((item, index) => ({ fileurl: item.media }))
     }
     return result
@@ -28,6 +27,6 @@ module.exports = new BaseKonnector(fields => {
     require('fs').writeFileSync('result.js', `window.result = ${JSON.stringify(result)}`)
     return result
   })
-  // displays the list of results
+  // displays the list of results in the tech.io page
   .then(result => console.log('TECHIO> open -s /project/target index.html'))
 })

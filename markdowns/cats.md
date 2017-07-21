@@ -17,8 +17,8 @@ have the following attributes :
 
 - fileurl: This is the url of the file which can be of any type. This attribute is mandatory or
   this item will be ignored
-- filename : This is the final file name. This attribute is optionnal and as default value, the
-  file name will be "smarly" guessed by the function. Use this attribute if the guess is not smart
+- filename : This is the final file name. This attribute is optional and as default value, the
+  file name will be "smartly" guessed by the function. Use this attribute if the guess is not smart
   enough for you.
 
 The final folder path is given as second parameter of the saveFiles function. This path is relative
@@ -28,12 +28,12 @@ in standalone mode, the main path is the path of the connector.
 There is also a third parameter, which is the options object. This options object can only have one
 attribute at the moment, which is `timeout` and this option can be interesting if your connector
 needs to fetch a lot of files and if the the stack does not give enough time to your connector to
-fetch it all. It could happend that the connector is stopped right in the middle of the download of
+fetch it all. It could happen that the connector is stopped right in the middle of the download of
 the file and the file will be broken. With the `timeout` option, the saveFiles function will check
 if the timeout is passed right after downloading each file and then will be sure to be stopped
 cleanly if the timeout is not too long. And since it is really fast to check that a file has
 already been downloaded, on the next run of the connector, it will be able to download some more
-file, and so on. The timeout is given as a timestamp. If you want the timeout to be in 10s just
+files, and so on. The timeout is given as a timestamp. If you want the timeout to be in 10s just
 give it `Date.now() + 10*1000`. You can try it ne the previous code.
 
 ## A final exercise
