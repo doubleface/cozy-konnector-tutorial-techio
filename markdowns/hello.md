@@ -4,8 +4,8 @@ Here is the traditional hello world code, but for a connector!
 
 @[Hello konnector!]({ "stubs": ["hello.js", "konnector-dev-config.json"], "command": "node_modules/.bin/cozy-konnector-standalone hello.js" })
 
-If you run it, you will see the hello world message in the standard output as a json string. The
-cozy stack can interpret those messages and this will be usefull later.
+If you run it, you will see the hello world message in the standard output as a JSON string. The
+cozy stack can interpret those messages and this will be useful later.
 
 If you want to run this connector outside tech.io, this is not hard either provided you have nodejs
 6 or better installed (even on windows) :
