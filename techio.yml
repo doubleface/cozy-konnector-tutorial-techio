@@ -3,11 +3,11 @@ title : Cozy Connector Tutorial
 # Table of contents
 plan:
   - title: intro # Set the page title
-    statement: markdowns/intro.md # Set the file path to the page content
+    statement: markdowns/1. intro.md # Set the file path to the page content
   - title: Hello connector!
-    statement: markdowns/hello.md
+    statement: markdowns/2. hello.md
   - title: Save cats
-    statement: markdowns/cats.md
+    statement: markdowns/3. cats.md
 
 # Settings for your programming projects and the associated Docker images
 projects:
